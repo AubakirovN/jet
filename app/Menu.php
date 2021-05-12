@@ -11,22 +11,22 @@ class Menu extends Corcel
     public static function getMenu($slug = null)
     {
     	$menu = Menu::slug($slug)->first();
-        
-        dd($menu);
-    	$menuArray = array();
-    	foreach ($menu->nav_menu_item as $item) {
-    		$parent_id = $item->meta->_menu_item_menu_item_parent;
+        // $items = Menu::slug($slug)->first()->items;
+        // dd($items);
+    	// $menuArray = array();
+    	// foreach ($menu->nav_menu_item as $item) {
+    	// 	$parent_id = $item->meta->_menu_item_menu_item_parent;
 
-          if ($item->meta->_menu_item_object != 'category') {
-            $item = \App\Post::find($item->meta->_menu_item_object_id);
-          }
-          else {
-            $item = \App\Term::find($item->meta->_menu_item_object_id);
-          }
+     //      if ($item->meta->_menu_item_object != 'category') {
+     //        $item = \App\Post::find($item->meta->_menu_item_object_id);
+     //      }
+     //      else {
+     //        $item = \App\Term::find($item->meta->_menu_item_object_id);
+     //      }
 
-          $menuArray[$parent_id][] = $item;
-    	}
-    	return $menuArray;
+     //      $menuArray[$parent_id][] = $item;
+    	// }
+    	return $menu;
     }
 
     public static function getSubMenu($slug, $pid)

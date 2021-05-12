@@ -2,9 +2,9 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+use Corcel\Model\Attachment as Corcel;
 
-class Attachment extends Model
+class Attachment extends Corcel
 {
-    //
+    protected $connection = 'wordpress';
 }

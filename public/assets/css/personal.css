@@ -237,6 +237,9 @@ h1 {
 .fourth_position{
   margin-top: 80px;
 }
+.second_position .page {
+  margin-top: 150px;
+}
 .fourth_position{
   margin-bottom: 80px;
 }
@@ -735,7 +738,7 @@ h1 {
   align-items: flex-end;
   margin-top: 40px;
 }
-.flights .order button{
+.flights .order .btnBook{
   color: #000;
   background: #FFCA80;
   border: 1px solid #FFCA80;
@@ -928,6 +931,10 @@ h1 {
     font-size: 12px;
 }
 
+.detail .flight_points .arrival_point{
+    text-align: right;
+}
+
 .detail .duration {
     font-size: 14px;
     color: #7E8085;
@@ -946,6 +953,17 @@ h1 {
     font-size: 16px;
     margin-top: 18px;
 }
+
+.detail button.yellow {
+    background: #FFCA80;
+    width: 100%;
+    padding: 16px;
+    border-radius: 3px;
+    border: none;
+    font-size: 16px;
+    margin-top: 18px;
+}
+
 .detail .rightside {
     width: 50%;
 }
@@ -976,6 +994,7 @@ h1 {
     background: #242629;
     transition: 0.7s;
     width: 100%;
+    color:#ffffff;
 }
 
 .detail textarea {
@@ -983,6 +1002,7 @@ h1 {
     background: #242629;
     border: none;
     border-radius: 3px;
+    color:#ffffff;
 }
 
 .detail .just{
@@ -1107,6 +1127,9 @@ button.register_login {
 
 input[type="text"] {}
 
+.customer_data a span {
+    color: #fff;
+}
 form.modal_form input {
     background: #F6F7F9;
     border: none;
@@ -1161,6 +1184,18 @@ form.modal_form .form_checkbox input {
     align-items: center;
 }
 
+.for_quantity {
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+    justify-content: space-between;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+}
+
 form.modal_form input.quantity__input {
     margin-bottom: 0;
     background: no-repeat;
@@ -1171,17 +1206,25 @@ form.modal_form input.quantity__input {
     margin: 0 15px;
 }
 
+.customer_data  input.quantity__input {
+    background: transparent;
+    border: none;
+    color: #fff;
+    width: 24px;
+    margin: 0px 15px;
+}
+
 .quantity_text {
     color: #7E8085;
 }
 
 a.quantity__minus span {
     font-size: 39px;
-    color: #000;
+    color: #fff;
 }
 
 a.quantity__plus span {
-    color: #000;
+    color: #fff;
     font-size: 30px;
 }
 
@@ -1227,6 +1270,10 @@ span.opennav {
 button.dropbtn {
     font-size: 25px;
 }
+
+a.dropbtn {
+    font-size: 25px;
+}
 span.opennav {
     display: none;
 }
@@ -1235,7 +1282,94 @@ span.opennav {
 @-webkit-keyframes rotate { 100% { -webkit-transform: rotate(360deg); } }
 
 @keyframes rotate { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+/* 
+FORM SUBMITION
+*/
 
+.customer_data{
+  position: relative;
+}
+
+.show_block {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgb(0 0 0 / 59%);
+  z-index: 1000;
+}
+.before_submit {
+  display: none;
+}
+.if_successful {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px 0;
+}
+
+.success_text {
+    width: 60%;
+    text-align: center;
+}
+
+.circle_check {
+    margin-bottom: 20px;
+}
+
+#ajax_loader {
+  display: none;
+}
+
+.spinner,
+.spinner > div {
+width: 25px;
+height: 25px;
+border-radius: 50% !important;
+}
+
+.spinner {
+border: 3px solid rgba(51, 51, 51, 0.2);
+position: relative;
+}
+
+.spinner > div {
+border: 3px solid #333;
+border-right-color: rgba(0, 0, 0, 0);
+border-top-color: rgba(0, 0, 0, 0);
+-webkit-animation: spin 1s linear infinite;
+-moz-animation: spin 1s linear infinite;
+-ms-animation: spin 1s linear infinite;
+-o-animation: spin 1s linear infinite;
+animation: spin 1s linear infinite;
+position: absolute;
+top: -3px;
+left: -3px;
+}
+
+@-webkit-keyframes spin {
+  0%   { -webkit-transform: rotate(0deg) }
+  100% { -webkit-transform: rotate(360deg) }
+}
+@-moz-keyframes spin {
+  0%   { -moz-transform: rotate(0deg) }
+  100% { -moz-transform: rotate(360deg) }
+}
+@-o-keyframes spin {
+  0%   { -o-transform: rotate(0deg) }
+  100% { -o-transform: rotate(360deg) }
+}
+@-ms-keyframes spin {
+  0%   { -ms-transform: rotate(0deg) }
+  100% { -ms-transform: rotate(360deg) }
+}
+@keyframes spin {
+  0%   { transform: rotate(0deg) }
+  100% { transform: rotate(360deg) }
+}
 
 
 @keyframes pulse {0% {transform: scale(0.9);opacity: 1;}

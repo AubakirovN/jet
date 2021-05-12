@@ -2,7 +2,7 @@
 
 namespace App;
 
-use App\Post as Corcel;
+use Corcel\Model\Meta\PostMeta as Corcel;
 
 class PostMeta extends Corcel
 {

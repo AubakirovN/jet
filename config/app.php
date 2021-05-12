@@ -177,7 +177,7 @@ return [
         Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider::class,
 
         Corcel\Laravel\CorcelServiceProvider::class,
-
+        Yajra\DataTables\DataTablesServiceProvider::class,  
     ],
 
     /*
@@ -231,6 +231,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         'LaravelLocalization' => Mcamara\LaravelLocalization\Facades\LaravelLocalization::class,
+        'DataTables' => Yajra\DataTables\Facades\DataTables::class,
 
     ],
 

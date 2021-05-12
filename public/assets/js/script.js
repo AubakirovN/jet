@@ -8,10 +8,13 @@ $(document).on('click', '.openNavigation', function(event) {
 
 jQuery(function($){
   $('.phone').mask('+7 (999) 999-9999');
+  $('.customer_tel').mask('+7 (999) 999-9999');
 });
 
 jQuery(function($){
   $('#flight_date').mask('99-99-9999');
+  $('#arrival_date').mask('99-99-9999');
+
 });
 
 $(document).ready(function() {

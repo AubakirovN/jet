@@ -16,9 +16,12 @@
         "jgrossi/corcel": "^4.0",
         "laravel/framework": "^7.30.4",
         "laravel/tinker": "^2.5",
-        "mcamara/laravel-localization": "^1.6"
+        "laravel/ui": "^2.0",
+        "mcamara/laravel-localization": "^1.6",
+        "yajra/laravel-datatables-oracle": "~9.0"
     },
     "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.5",
         "facade/ignition": "^2.0",
         "fakerphp/faker": "^1.9.1",
         "fzaninotto/faker": "^1.9",
