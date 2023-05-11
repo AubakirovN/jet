@@ -1,6 +1,6 @@
 Project to renting privet Jets.
-Backend Technologies Laravel + Wordpress + jQuery.
-Front End Technologis: HTML, CSS, Bootstap, JS
+<br/>Backend Technologies Laravel + Wordpress + jQuery.
+<br/>Front End Technologis: HTML, CSS, Bootstap, JS
 
 Functions of project:
 - Authorization
